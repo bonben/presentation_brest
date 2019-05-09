@@ -1,0 +1,249 @@
+\documentclass[t,compress,mathserif,12pt,xcolor=dvipsnames]{beamer}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\usepackage{etex}
+\reserveinserts{28}
+\definecolor{bleuUni}{RGB}{3, 184, 222}
+\definecolor{marronUni}{RGB}{68, 58, 49}
+\usecolortheme[named=bleuUni]{structure}
+\usepackage[bars]{beamerthemetree} % Beamer theme v 2.2
+\usepackage{multimedia}
+\usepackage[utf8]{inputenc}
+%\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{kmath,kerkis}
+\usepackage{xmpmulti}
+%\usepackage{mathpazo}
+%\usepackage[bitstream-charter]{mathdesign}
+%\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{tikz}
+\usetikzlibrary{patterns, shapes, arrows}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{eulervm}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{listings}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\lstset{
+  language=C++,
+  basicstyle=\tiny\ttfamily,
+  numbers=left,
+  numberstyle=\tiny\ttfamily,
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=single,
+  tabsize=2,
+  captionpos=b,
+  breaklines=true,
+  breakatwhitespace=false,
+  escapeinside={(*@}{@*)},
+  identifierstyle=\ttfamily,
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle=\color[rgb]{0.627,0.126,0.941},
+  moredelim=[is][\underbar]{**}{**},
+}
+
+\lstdefinestyle{mycpp}
+{
+    language = C++,
+    % numbers=left,
+    % numbersep=0.3em,
+    escapeinside={(*@}{@*)},
+    tabsize=2,
+    % basicstyle=\tiny\ttfamily,
+    morekeywords = {constexpr,int8_t,int16_t,int32_t, size_t},
+    % commentstyle=\color{comment-color},
+}
+
+\usepackage[backend=biber, style=ieee]{biblatex}
+\addbibresource{bibli.bib}
+\renewcommand\mkbibacro[1]{{\footnotesize\MakeUppercase{#1}}}
+
+\mode<presentation>
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+ \oldmacro\hfill%
+\insertframenumber\,/\,\inserttotalframenumber}
+\setbeamertemplate{footline}[frame number]
+\setbeamersize{text margin left=10pt,text margin right=10pt}
+\setbeamerfont{frametitle}{size=\large}
+\setbeamertemplate{frametitle}{ \nointerlineskip \begin{beamercolorbox}[wd=\paperwidth,ht=2.2ex,dp=0.5ex,left]{frametitle} \hspace*{3.1ex}\strut\bfseries\color{bleuUni!15!white}\insertframetitle\strut\par \end{beamercolorbox}}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+  \definecolor{bluecite}{HTML}{009DE0} 
+
+
+\makeatletter
+\def\beamer@andinst{\\[0.1em]}
+\makeatother
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\setbeamercovered{higly dynamic}
+\usetheme{Ilmenau} % Beamer theme v 3.0
+%\useoutertheme[subsection=true]{smoothbars}%Beamer Outer Theme-circles on top
+\setbeamercolor{section in head/foot}{bg=marronUni}
+
+\useinnertheme{circles} %rectangle bullet points instead of circle ones
+\usepackage{beamerthemebars}
+\setbeamercolor{navigation symbols dimmed}{fg=red!80!black}
+\setbeamercolor{navigation symbols}{fg=red!80!black}
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\title{\textbf{Candidature au poste de \\ Maître de conférence en électronique numérique}}
+%\subtitle{algorithms et arhitecture}\hspace{10.7cm}
+\author[Mathieu Léonardon\hspace{3.01cm}\url{https://mathieuleonardon.com}\hspace{1.0cm}{mathieu.leonardon@ims-bordeaux.fr}]{\Large{Mathieu Léonardon}\vspace{-0.5cm}}
+\titlegraphic{\includegraphics[height=2cm]{logos/IMT_Atlantique_logo.png}}
+\date{14 Mai 2019}
+%\pgfdeclareimage[height=.8cm]{logo_ISCAS}{index.png}
+%\logo{\pgfuseimage{logo_ISCAS}\hspace{\dimexpr\paperwidth-3.55cm}\vspace{-8pt}}
+\input{colors}
+
+\definecolor{dgreen}{rgb}{0.,0.6,0.}
+\definecolor{milano}{rgb}{0.458824, 0.050980, 0.058824}
+\definecolor{bahama}{rgb}{0.066667, 0.298039, 0.443137}
+\definecolor{blupres}{RGB}{0, 157, 224}
+\definecolor{redpres}{RGB}{204, 0, 0}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
+
+\newcommand{\RED} [1]{\textcolor{Paired-5}{\textbf{#1}}}
+\newcommand{\ORANGE} [1]{\textcolor{orange}{\textbf{#1}}}
+\newcommand{\GREEN} [1]{\textcolor{Paired-3}{\textbf{#1}}}
+\newcommand{\BLUE} [1]{\textcolor{Paired-1}{\textbf{#1}}}
+
+\newcommand{\MILANO} [1]{\textcolor{milano}{#1}}
+\newcommand{\BAHAMA} [1]{\textcolor{bahama}{#1}}
+
+\usepackage{textpos}
+%\usepackage{stmaryrd}
+\usepackage{amsbsy}
+\usepackage{makecell}
+%\usepackage{fourier-orns}
+% \usepackage{tikz}
+% \usetikzlibrary{patterns, shapes, arrows, shapes.multipart}
+
+\usepackage{etoolbox}
+% \AtBeginSection[]
+% {
+% 	\ifnumcomp{\value{section}}{=}{1}{}{
+% \begin{frame}[c]{Plan}
+% \centering
+% \tableofcontents[
+%   currentsection,
+%   currentsubsection,
+% ]
+% \end{frame}
+% }
+% }
+% \AtBeginSubsection[]
+% {
+% 	\begin{frame}[c]{}
+% \tableofcontents[
+% currentsection,
+% sectionstyle=show/show,
+% subsectionstyle=show/shaded/hide
+% ]
+% 	\end{frame}
+% }
+
+
+% \defbeamertemplate*{title page}{customized}[1][]
+% {
+%   \usebeamerfont{title}\inserttitle\par
+%   \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+%   \bigskip
+%   \usebeamerfont{author}\insertauthor\par
+%   \usebeamerfont{institute}\insertinstitute\par
+%   \usebeamerfont{date}\insertdate\par
+%   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+% }
+
+\bibliography{bibli}
+
+
+% \includeonly{part2}
+
+\begin{document}
+
+\begin{frame}[c]
+\titlepage
+\end{frame}
+
+\section{Cursus}
+\subsection{Formation d'ingénieur}
+\begin{frame}[c]{Formation d'ingénieur - Cours}
+
+\end{frame}
+\begin{frame}[c]{Formation d'ingénieur - Apprentissage}
+
+\end{frame}
+
+\subsection{Doctorat}
+\begin{frame}[c]{Décodage de Codes Polaires}
+
+\end{frame}
+\begin{frame}[c]{Implémentation logicielle SC Liste}
+
+\end{frame}
+\begin{frame}[c]{Architectures ASIP}
+
+\end{frame}
+\begin{frame}[c]{Publications}
+
+\end{frame}
+\subsection{Poste ATER}
+\begin{frame}[c]{Enseignement}
+
+\end{frame}
+
+\begin{frame}[c]{Travaux}
+
+\end{frame}
+
+\section{Intégration}
+\subsection{Enseignement}
+\begin{frame}[c]{Enseignements de première année}
+
+\end{frame}
+\begin{frame}[c]{TAF SEH}
+
+\end{frame}
+\begin{frame}[c]{TAF CoOC}
+
+\end{frame}
+\subsection{Recherche}
+\begin{frame}[c]{Codes Polaires}
+
+\end{frame}
+\begin{frame}[c]{ASIP}
+
+\end{frame}
+\begin{frame}[c]{Simulation de chaînes de communications}
+
+\end{frame}
+\begin{frame}[c]{Collaboration internationales}
+
+\end{frame}
+\end{document}
+
