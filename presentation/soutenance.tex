@@ -144,18 +144,20 @@
 % \usetikzlibrary{patterns, shapes, arrows, shapes.multipart}
 
 \usepackage{etoolbox}
-% \AtBeginSection[]
-% {
-% 	\ifnumcomp{\value{section}}{=}{1}{}{
-% \begin{frame}[t]{Plan}
-% \centering
-% \tableofcontents[
-%   currentsection,
-%   currentsubsection,
-% ]
-% \end{frame}
+\AtBeginSection[]
+{
+	% \ifnumcomp{\value{section}}{=}{1}{}{
+\begin{frame}[t]{Plan}
+\centering
+\tableofcontents[
+  currentsection,
+  currentsubsection,
+  sectionstyle=show/shaded,
+  subsectionstyle=show/show/shaded,
+]
+\end{frame}
 % }
-% }
+}
 % \AtBeginSubsection[]
 % {
 % 	\begin{frame}[t]{}
@@ -194,24 +196,26 @@
 \subsection{Formation d'ingénieur}
 \begin{frame}[t]{Formation d'ingénieur - Cours}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
         \begin{itemize}
-          \item Filière "Systèmes Electroniques Embarqués"
-          \item Electronique numérique , cible FPGA et ASIC
-          \item Architecture des ordinateurs
-          \item Programmation uC
-          \item OS embarqués
+          \item<+-> Enseirb-Matmeca (Bordeaux)
+          \item<+-> "Systèmes Electroniques Embarqués"
+          \begin{itemize}
+            \item<+-> FPGA et ASIC (Langage VHDL)
+            \item<+-> Architecture des ordinateurs
+            \item<+-> Programmation uC
+            \item<+-> OS embarqués
+          \end{itemize}
         \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only<1->{\centering\includegraphics[width=0.5\textwidth]{fig/UBx}\\ \vspace{0.5cm}}
+        \only<3->{\includegraphics[width=0.5\textwidth]{fig/fpga}\\ \vspace{0.5cm}}
+        \only<4->{\includegraphics[width=\textwidth]{fig/stages}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -222,19 +226,16 @@
 \end{frame}
 \begin{frame}[t]{Formation d'ingénieur - Apprentissage}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
         \begin{itemize}
-        \item Entreprise WorldCast Systems
-        \item Systèmes d'émission, transport et monitoring des standards radios et télévision
-        \item Ai travaillé dans l'équipe de R\&D des émetteurs FM
-        \item Conception de cartes électroniques
-        \item Programmation de uC 
-        \item Projet : création d'une IHM pour
+          \item<+-> Entreprise WorldCast Systems
+          \item<+-> Broadcast
+          \item<+-> \'Equipe R\&D émetteurs FM
           \begin{itemize}
-            \item automatisation de taches de production
-            \item utilisateur final
+            \item<+-> Conception de cartes électroniques
+            \item<+-> Programmation de uC 
+            \item<+-> Projet : IHM 
           \end{itemize}
         \end{itemize}
       \end{column}
@@ -242,9 +243,9 @@
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only<1->{\includegraphics[width=\textwidth]{fig/worldcast}\\}
+        \only<3-5>{\vspace{0.8cm}\includegraphics[width=\textwidth]{fig/helios}\\}
+        \only<6->{\includegraphics[width=\textwidth]{fig/engi}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -259,23 +260,26 @@
 \subsection{Doctorat}
 \begin{frame}[t]{Décodage de Codes Polaires}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
-      \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
-          \begin{itemize}
-            \item Thème : implémentation des algorithmes de décodage de codes polaires
-            \item Cotutelle Canada - France
-          \end{itemize}
-      \end{column}
-      \begin{column}{0.04\textwidth}
+  \vspace{1cm}
+  \centering
+  Décodage de codes polaires sur des architectures programmables
+    % \begin{columns}
+      % \begin{column}{0.63\textwidth}
+        % \vspace{-30pt}
+          % \begin{itemize}
+            % \item Décodage de codes polaires sur des architectures programmables
+            % \item Cotutelle Canada - France
+          % \end{itemize}
+      % \end{column}
+      % \begin{column}{0.04\textwidth}
 
-      \end{column}
-      \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
-      \end{column}
-    \end{columns}
+    %   \end{column}
+    %   \begin{column}{0.33\textwidth}
+    %     \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
+    %     \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
+    %     \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+    %   \end{column}
+    % \end{columns}
   \end{minipage}
   \begin{figure}[htp]
     \centering
@@ -285,24 +289,28 @@
 
 \begin{frame}[t]{Implémentation logicielle SC Liste}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
         \begin{itemize}
-          \item Implémentation logicielle sur cibles x86\_64 \& ARM
-          \item Parallélisation
-          \item Implémentation flexible et générique
-          \item Adaptatif le plus rapide à ce jour
-          \item Intégré avec le projet AFF3CT
+          \item<+-> Décodeurs logiciels - x86\_64 \& ARM
+          \item<+-> Parallélisation
+          \begin{itemize}
+            \item<2-> SIMD, multithreads, multinodes
+          \end{itemize} 
+          \item<+-> Implémentation flexible et générique
+          \item<+-> Adaptatif le plus rapide à ce jour
+          \item<+-> Intégré avec le projet AFF3CT 
+          \begin{itemize}
+            \item<5-> \url{https://aff3ct.github.io}
+          \end{itemize}
         \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only<1->{\includegraphics[width=\textwidth]{fig/throughput}\\ \vspace{0.5cm}}
+        \only<5->{\includegraphics[width=\textwidth]{fig/chain_ink}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -315,31 +323,27 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{Architectures ASIP}
+\begin{frame}[t]{Architectures ASIP pour le décodage de codes polaires}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
-      \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
+    \begin{columns}[T]
+      \begin{column}{0.56\textwidth}
         \begin{itemize}
-          \item Deux méthodologies abordées
-          \item Qu'est-ce qu'un ASIP
-          \item Tensilica - Schéma - Résultat
+          \item<+-> Architecture 1 - Tensilica
           \begin{itemize}
-            \item Collaboration Pierre Langlois (Polytechnique Montréal)
+            \item<1-> Collaboration Pierre Langlois (Polytechnique Montréal)
           \end{itemize}
-          \item TTA - Schéma - Résultat
+          \item<+-> Architecture 2 - TTA
           \begin{itemize}
-            \item Collaboration Pekka Jääskeläinen (TUT)
+            \item<2-> Collaboration Pekka Jääskeläinen (TUT)
           \end{itemize}
         \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
-      \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+      \begin{column}{0.40\textwidth}
+        \only<1->{\includegraphics[width=\textwidth]{fig/full_tensilica}\\ \vspace{0.5cm}}
+        \only<2->{\includegraphics[width=\textwidth]{fig/tta_base}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -351,51 +355,92 @@
 
 \end{frame}
 
-\begin{frame}[t]{Publications}
-  \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
-      \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
-        Reprendre slide thèse
-      \end{column}
-      \begin{column}{0.04\textwidth}
+\begin{frame}[c]{Publications}
 
-      \end{column}
-      \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
-      \end{column}
-    \end{columns}
-  \end{minipage}
-  \begin{figure}[htp]
-    \centering
-    \includegraphics[width=\textwidth]{fig/frise}
-  \end{figure}
+  \begin{enumerate}
+\renewcommand{\section}[2]{} % Trick to avoid references section
 
-
+    \renewcommand*{\bibfont}{\scriptsize}
+    \nocite{leonardon_fast_2017,leonardon_custom_2018,ghaffari_improving_2017,leonardon_tta_2018,Ghaffari2018,cassagne_fast_2017,cassagne_gdr_2017,leonardon_custom_2018}
+    \vfill
+    \item<+-> Implémentation logicielle de l'algorithme  SCL
+    \scriptsize{\printbibliography[keyword={fast-scl}]}
+    \vfill
+    \item<+-> Spécialisation d'un processeur Tensilica
+    \scriptsize{\printbibliography[keyword={tensilica}]}
+    \vfill
+    \item<+-> Conception d'un processeur de type TTA
+    \scriptsize{\printbibliography[keyword={tta}]}
+    \vfill
+  \end{enumerate}
 
 \end{frame}
+
+\begin{frame}[c]{Publications}
+
+  \begin{enumerate}
+\renewcommand{\section}[2]{} % Trick to avoid references section
+
+    \renewcommand*{\bibfont}{\scriptsize}
+    \nocite{leonardon_fast_2017,leonardon_custom_2018,ghaffari_improving_2017,leonardon_tta_2018,Ghaffari2018,cassagne_fast_2017,cassagne_gdr_2017}
+    \vfill
+    \item<+-> Implémentation du décodeur SCMA
+    \printbibliography[keyword={ghaffari}]
+    \vfill
+    \item<+-> Contribution au projet AFF3CT
+    \printbibliography[keyword={aff3ct}]
+    \vfill
+  \end{enumerate}
+
+\end{frame}
+
 
 \subsection{Poste ATER}
 \begin{frame}[t]{Enseignement}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \vspace{-0.5cm}
+    \begin{itemize}
+      \item<+-> \'Electronique numérique
+      \begin{itemize}
+        \item<1-> Projet de conception en \'electronique (50 HETD)
+        \item<1-> Architecture reconfigurable (20 HETD)
+        \item<1-> \'Electronique Num\'erique (25 HETD)
+        \item<1-> Logique combinatoire et logique s\'equentielle (32 HETD)
+      \end{itemize}
+      \vspace{0.3cm}
+      \item<+-> Informatique
+      \begin{itemize}
+        \item<2-> Projet micro-processeur (36 HETD)
+        \item<2-> Architecture des ordinateurs (16 HETD)
+        \item<2-> Projet micro-informatique (42 HETD)
+        \item<2-> Programmation objet. Langage C++ (15 HETD)
+      \end{itemize}
+    \end{itemize}
+
+  \end{minipage}
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[width=\textwidth]{fig/frise}
+  \end{figure}
+\end{frame} 
+
+\begin{frame}[t]{Travaux}
+ \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
           \begin{itemize}
-            \item Liste des enseignements
-            \item Projet DVBS2
-            \item SC Flip
+            \item Projet industriel (Airbus Defense \& Space)
+            \begin{itemize}
+              \item Radio logicielle
+              \item Communications satellitaires
+            \end{itemize}
           \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only<+->{\includegraphics[width=\textwidth]{fig/chaine_airbus}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -403,33 +448,24 @@
     \centering
     \includegraphics[width=\textwidth]{fig/frise}
   \end{figure}
-
-
-\end{frame} 
-
-\begin{frame}[t]{Travaux}
-
 \end{frame}
 
 \section{Intégration}
 \subsection{Enseignement}
 \begin{frame}[t]{Enseignements de première année}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
           \begin{itemize}
-            \item Opérationnel sur les projets d'électronique numérique 
-            \item Possibilité d'encadrements des différents projets (FAIRE, SAR, CODEV)
+            \item Opérationnel sur l'enseignement d'électronique numérique,
+            \item Apte à encadrer les différents projets (FAIRE, SAR, CODEV).
           \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only{\includegraphics[width=\textwidth]{fig/loto}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -441,25 +477,12 @@
 
 \end{frame}
 
-\begin{frame}[t]{TAF SEH}
+\begin{frame}[t]{TAF Systèmes Embarqués Hétérogènes}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
-      \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
-          \begin{itemize}
-              \item Citation : "La double compétence logicielle et matérielle, indissociable des systèmes embarqués, est très recherchée."
-              \item -> profil en adéquation
-          \end{itemize}
-      \end{column}
-      \begin{column}{0.04\textwidth}
+  \centering
+  \vspace{0.8cm}
+              " La double compétence logicielle et matérielle, indissociable des systèmes embarqués, est très recherchée. "
 
-      \end{column}
-      \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
-      \end{column}
-    \end{columns}
   \end{minipage}
   \begin{figure}[htp]
     \centering
@@ -469,22 +492,21 @@
 
 \begin{frame}[t]{UE Coeurs}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
         \begin{itemize}
-            \item UEC1 : Circuits intégrés numériques et analogiques
-            \item UEC2 : Méthodologies - de l’algorithme à la puce
-            \item UEC3 : Systèmes embarqués
+            \item<+-> UEC1 : Circuits intégrés numériques et analogiques
+            \item<+-> UEC2 : Méthodologies - de l’algorithme à la puce
+            \item<+-> UEC3 : Systèmes embarqués
         \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only<1>{\includegraphics[width=.9\textwidth]{fig/UEC1}}
+        \only<2>{\includegraphics[width=.9\textwidth]{fig/UEC2}}
+        \only<3>{\includegraphics[width=.9\textwidth]{fig/UEC3}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -498,23 +520,23 @@
 
 \begin{frame}[t]{UE \'Electives}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
         \begin{itemize}
-            \item UEE : Conception haut niveau de circuits
-            \item UEE : Calcul parallèle
-            \item UEE : IA Intro \& IA Optimisation
-            \item UEE : Workshop à Grenoble - recherche et industrie des micro et nanotechnologies
+            \item<+-> UEE : Conception haut niveau de circuits
+            \item<+-> UEE : IA Intro \& IA Optimisation
+            \item<+-> UEE : Workshop à Grenoble - recherche et industrie des micro et nanotechnologies
+            \item<+-> UEE : Calcul parallèle
         \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only<1>{\includegraphics[width=.9\textwidth]{fig/UEE1}}
+        \only<2>{\includegraphics[width=.9\textwidth]{fig/UEE3}}
+        \only<3>{\includegraphics[width=.9\textwidth]{fig/UEE4}}
+        \only<4>{\includegraphics[width=.9\textwidth]{fig/UEE2}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -530,20 +552,17 @@
 
 \begin{frame}[t]{TAF CoOC}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
-      \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
-        % HERE
-      \end{column}
-      \begin{column}{0.04\textwidth}
-
-      \end{column}
-      \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
-      \end{column}
-    \end{columns}
+        \begin{itemize}
+          \item<+-> Conception centrée utilisateur
+          \item<+-> Prototypage rapide et développement agile
+          \item<+-> L'objet dans son environnement
+          \item<+-> Projet fil rouge
+          \begin{itemize}
+            \item<+-> Maquettage
+            \item<+-> \'Etude des utilisateurs
+            \item<+-> Rédaction cahier des charges
+          \end{itemize}
+        \end{itemize}
   \end{minipage}
   \begin{figure}[htp]
     \centering
@@ -555,21 +574,28 @@
 \subsection{Recherche}
 \begin{frame}[t]{Codes Polaires}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
+        \vspace{-0.5cm}
         \begin{itemize}
-          \item Thèse en cours à l'IMT sur l'implémentation du SC Liste
-          \item Implémentation SC Liste sur TTA
-        \end{itemize}
+          \item<+-> Expertise développée au cours de ma thèse
+            \begin{itemize}
+              \item<+-> Construction
+              \item<2-> Algorithmes de décodage
+              \item<2-> Architectures matérielles
+              \item<2-> Décodage logiciel
+            \end{itemize}
+          \item<+-> Thèse en cours à l'IMT sur l'implémentation du SC Liste
+          \item<+-> Multinoyaux
+          \item<+-> Algorithmes à sortie souple
+        \end{itemize} 
       \end{column}
       \begin{column}{0.04\textwidth}
 
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+        \only<1->{\includegraphics[width=\textwidth]{fig/sc}\\ \vspace{0.5cm}}
+        \only<4->{\includegraphics[width=\textwidth]{fig/ilp-1}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -577,84 +603,83 @@
     \centering
     \includegraphics[width=\textwidth]{fig/frise}
   \end{figure}
-
 \end{frame}
+
+\begin{frame}[t]{Simulation haut débit de chaînes de communications}
+  \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \begin{columns}[T]
+      \begin{column}{0.63\textwidth}
+        \begin{itemize}
+          \item<+-> Expertise dans les simulations haut débits (AFF3CT)
+          \item<+-> Réalisation des démonstrateurs (USRP)
+          \vspace{0.8cm}
+          \item<+-> Modulation (FBMC/OQAM)
+          \item<3-> Entrelaceurs de turbo-codes
+          \item<3-> Modulation codée
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.04\textwidth}
+      \end{column}
+      \begin{column}{0.33\textwidth}
+        \centering
+        \only<1->{\includegraphics[width=0.3\textwidth]{fig/aff3ct}\\ \vspace{0.5cm}}
+        \only<2->{\includegraphics[width=\textwidth]{fig/usrp}}
+      \end{column}
+    \end{columns}
+  \end{minipage}
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[width=\textwidth]{fig/frise}
+  \end{figure}
+\end{frame}
+
 \begin{frame}[t]{ASIP}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
-      \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
-        \begin{itemize}
-          \item Ref à mes travaux, publis
-          \item 5G : multiplication des scénarios, besoin de flexibilité des architectures
-          \item TTA
-        \end{itemize}
-      \end{column}
-      \begin{column}{0.04\textwidth}
-
-      \end{column}
-      \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
-      \end{column}
-    \end{columns}
+    \begin{itemize}
+      \item<+-> Nombreux travaux sur architectures ASIP (DecASIP)
+      \item<+-> Intégration : compétent sur les différents langages ASIP (incl. LISA + Synopsys)
+      \item<+-> Intégration : intérêt des architectures TTA
+    \end{itemize}
+    \only<1>{
+      \vspace{-2cm}
+      \begin{enumerate}
+        \renewcommand{\section}[2]{} % Trick to avoid references section
+        \renewcommand*{\bibfont}{\tiny}
+        \nocite{6579576,7155493,6654620,6683963,6571888,7041196}
+        \printbibliography[keyword={asip-amer}]
+      \end{enumerate}
+    }
+    \only<3>{
+      \centering
+      \includegraphics[width=0.6\textwidth]{fig/ilp-1}
+    }
   \end{minipage}
   \begin{figure}[htp]
     \centering
     \includegraphics[width=\textwidth]{fig/frise}
   \end{figure}
-
 \end{frame}
-\begin{frame}[t]{Simulation de chaînes de communications}
-  \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
-      \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
-        \begin{itemize}
-          \item Nombreuses propositions d'algorithmes itératif (codes concaténés, modulation codée)
-          \item Expertise dans les simulations haut débits (AFF3CT)
-          \item Possibilité de réaliser des démonstrateurs (USRP)
 
-        \end{itemize}
-      \end{column}
-      \begin{column}{0.04\textwidth}
-
-      \end{column}
-      \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
-      \end{column}
-    \end{columns}
-  \end{minipage}
-  \begin{figure}[htp]
-    \centering
-    \includegraphics[width=\textwidth]{fig/frise}
-  \end{figure}
-
-\end{frame}
 \begin{frame}[t]{Collaboration internationales}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
-    \begin{columns}
+    \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-30pt}
         \begin{itemize}
-          \item Thèse en cotutelle avec Polytechnique Montréal
+          \item<+-> Thèse en cotutelle avec Polytechnique Montréal
           \begin{itemize}
-          \item Yvon Savaria, Directeur de thèse
-          \item Pierre Langlois, Co-auteur sur le papier Tensilica
+          \item<1-> Yvon Savaria, Directeur de thèse
+          \item<1-> Pierre Langlois, Co-auteur
           \end{itemize}
-          \item Thibaud Tonnellier, McGill University, Montréal
-          \item Pekka Jääskelainen, co-autheur sur le papier TTA, contributeur principal du projet TCE
+          \item<+-> Thibaud Tonnellier, McGill University (Canada), Co-auteur
+          \item<+-> Pekka Jääskelainen, TUT (Finlande), Co-auteur
         \end{itemize}      \end{column}
       \begin{column}{0.04\textwidth}
-
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-        \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
+      \centering
+        \only<1->{\includegraphics[width=0.5\textwidth]{fig/poly}\\ }
+        \only<2->{\includegraphics[width=0.5\textwidth]{fig/mcgill}\\}
+        \only<3->{\includegraphics[width=1\textwidth]{fig/tampere}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -662,8 +687,6 @@
     \centering
     \includegraphics[width=\textwidth]{fig/frise}
   \end{figure}
-
-
 \end{frame}
 \end{document}
 
