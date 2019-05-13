@@ -332,6 +332,7 @@
           \begin{itemize}
             \item<1-> Collaboration Pierre Langlois (Polytechnique Montréal)
           \end{itemize}
+          \vspace{1.5cm}
           \item<+-> Architecture 2 - TTA
           \begin{itemize}
             \item<2-> Collaboration Pekka Jääskeläinen (TUT)
@@ -547,7 +548,7 @@
     \centering
     \only<1>{\includegraphics[width=\textwidth]{fig/frise16}}
     \only<2>{\includegraphics[width=\textwidth]{fig/frise17}}
-    \only<3>{\includegraphics[width=\textwidth]{fig/frise9}}
+    \only<3>{\includegraphics[width=\textwidth]{fig/frise17}}
     \only<4>{\includegraphics[width=\textwidth]{fig/frise18}}
   \end{figure}
 
@@ -585,15 +586,13 @@
         \vspace{-0.5cm}
         \begin{itemize}
           \item<+-> Expertise développée au cours de ma thèse
-            \begin{itemize}
-              \item<+-> Construction
-              \item<2-> Algorithmes de décodage
-              \item<2-> Architectures matérielles
-              \item<2-> Décodage logiciel
-            \end{itemize}
-          \item<+-> Thèse en cours à l'IMT sur l'implémentation du SC Liste
-          \item<+-> Multinoyaux
-          \item<+-> Algorithmes à sortie souple
+          \item<+-> Axes de recherche possibles
+          \begin{itemize}
+            \item<+-> Implémentations matérielles flexibles
+            \item<+-> Implémentations logicielles hautes performance
+            \item<+-> Algorithmes à sortie souple
+            \item<+-> Nouvelles constructions : multinoyaux, assymétriques
+          \end{itemize}
         \end{itemize} 
       \end{column}
       \begin{column}{0.04\textwidth}
@@ -601,7 +600,7 @@
       \end{column}
       \begin{column}{0.33\textwidth}
         \only<1->{\includegraphics[width=\textwidth]{fig/sc}\\ \vspace{0.5cm}}
-        \only<4->{\includegraphics[width=\textwidth]{fig/ilp-1}}
+        \only<3->{\includegraphics[width=\textwidth]{fig/ilp-1}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -617,18 +616,20 @@
       \begin{column}{0.63\textwidth}
         \begin{itemize}
           \item<+-> Expertise dans les simulations haut débits (AFF3CT)
-          \item<+-> Réalisation des démonstrateurs (USRP)
-          \vspace{0.8cm}
+          \vspace{0.3cm}
+          \item<+-> Réalisation de démonstrateurs (USRP)
+          \vspace{0.5cm}
           \item<+-> Modulation (FBMC/OQAM)
           \item<3-> Entrelaceurs de turbo-codes
           \item<3-> Modulation codée
+          \item<3-> ...
         \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
       \end{column}
       \begin{column}{0.33\textwidth}
         \centering
-        \only<1->{\includegraphics[width=0.3\textwidth]{fig/aff3ct}\\ \vspace{0.5cm}}
+        \only<1->{\includegraphics[width=0.3\textwidth]{fig/aff3ct}\\ \vspace{0.2cm}}
         \only<2->{\includegraphics[width=\textwidth]{fig/usrp}}
       \end{column}
     \end{columns}
@@ -670,22 +671,56 @@
   \begin{minipage}[t][5.0cm][t]{\textwidth}
     \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \begin{itemize}
-          \item<+-> Thèse en cotutelle avec Polytechnique Montréal
+        \small{
           \begin{itemize}
-          \item<1-> Yvon Savaria, Directeur de thèse
-          \item<1-> Pierre Langlois, Co-auteur
+            \item<+-> Thèse en cotutelle avec Polytechnique Montréal
+            \begin{itemize}
+            \item<1-> Yvon Savaria, Directeur de thèse
+            \item<1-> Pierre Langlois, Co-auteur
+            \end{itemize}
+            \vspace{0.8cm}
+            \item<+-> Thibaud Tonnellier, McGill University (Canada), Co-auteur
           \end{itemize}
-          \item<+-> Thibaud Tonnellier, McGill University (Canada), Co-auteur
-          \item<+-> Pekka Jääskelainen, TUT (Finlande), Co-auteur
-        \end{itemize}      \end{column}
+        }
+      \end{column}
       \begin{column}{0.04\textwidth}
       \end{column}
       \begin{column}{0.33\textwidth}
       \centering
-        \only<1->{\includegraphics[width=0.5\textwidth]{fig/poly}\\ }
+        \only<1->{\vspace{0.6cm}\includegraphics[width=0.5\textwidth]{fig/poly}\\\vspace{1.6cm} }
         \only<2->{\includegraphics[width=0.5\textwidth]{fig/mcgill}\\}
-        \only<3->{\includegraphics[width=1\textwidth]{fig/tampere}}
+      \end{column}
+    \end{columns}
+  \end{minipage}
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[width=\textwidth]{fig/frise23}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}[t]{Collaborations internationales}
+  \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \begin{columns}[T]
+      \begin{column}{0.63\textwidth}
+        \small{
+          \begin{itemize}
+            \item<+-> Pekka Jääskelainen, TUT (Finlande), Co-auteur
+            \item<+-> Vyacheslav Klymentiev, Saint Petersburg Electrotechnical University (Russie), AFF3CT
+            \item<2-> Peter Trifonov, Saint Petersburg Polytechnic University (Russie), AFF3CT
+            \item<2-> Chen Shuang, Tsinghua University (Chine), AFF3CT
+          \end{itemize}
+        }
+      \end{column}
+      \begin{column}{0.04\textwidth}
+      \end{column}
+      \begin{column}{0.33\textwidth}
+      \centering
+        \only<1->{\includegraphics[width=1\textwidth]{fig/tampere}\\\vspace{-0.1cm}}
+        \only<2->{\includegraphics[width=0.26\textwidth]{fig/etu}\\\vspace{0.5cm}}
+        \only<2->{\includegraphics[width=0.5\textwidth]{fig/polysp}\vspace{-0.2cm}\\}
+        \only<2->{\includegraphics[width=0.7\textwidth]{fig/tsinghua}}
+
       \end{column}
     \end{columns}
   \end{minipage}
