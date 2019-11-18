@@ -60,3 +60,5 @@ head/*.aux
 *.bbl
 *converted-to.pdf
 *.blg
+build/
+.vscode/
