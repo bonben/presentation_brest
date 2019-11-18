@@ -106,7 +106,7 @@
 \title{\textbf{Candidature au poste de \\ Maître de conférence en électronique numérique}}
 %\subtitle{algorithms et arhitecture}\hspace{10.7cm}
 \author[Mathieu Léonardon\hspace{3.01cm}\url{https://mathieuleonardon.com}\hspace{1.0cm}{mathieu.leonardon@ims-bordeaux.fr}]{\Large{Mathieu Léonardon}\vspace{-0.5cm}}
-\titlegraphic{\includegraphics[height=2cm]{logos/IMT_Atlantique_logo.png}}
+\titlegraphic{\includegraphics[height=1.5cm]{fig/labsticc.png}\quad\includegraphics[height=2cm]{logos/IMT_Atlantique_logo.png}}
 \date{14 Mai 2019}
 \input{colors}
 
@@ -128,7 +128,7 @@
 \newcommand{\RED} [1]{\textcolor{Paired-5}{\textbf{#1}}}
 \newcommand{\ORANGE} [1]{\textcolor{orange}{\textbf{#1}}}
 \newcommand{\GREEN} [1]{\textcolor{Paired-3}{\textbf{#1}}}
-\newcommand{\BLUE} [1]{\textcolor{Paired-1}{\textbf{#1}}}
+\newcommand{\BLUE} [1]{\textcolor{bleuUni}{\textbf{#1}}}
 
 \newcommand{\MILANO} [1]{\textcolor{milano}{#1}}
 \newcommand{\BAHAMA} [1]{\textcolor{bahama}{#1}}
@@ -150,7 +150,7 @@
 \tableofcontents[
   currentsection,
   currentsubsection,
-  sectionstyle=show/shaded,
+  sectionstyle=show/show,
   subsectionstyle=show/show/shaded,
 ]
 \end{frame}
@@ -197,7 +197,7 @@
     \begin{columns}[T]
       \begin{column}{0.63\textwidth}
         \begin{itemize}
-          \item<+-> Enseirb-Matmeca (Bordeaux)
+          \item<+-> ENSEIRB-Matmeca (Bordeaux)
           \item<+-> "Systèmes Electroniques Embarqués"
           \begin{itemize}
             \item<+-> FPGA et ASIC (Langage VHDL)
@@ -263,7 +263,8 @@
   \begin{minipage}[t][5.0cm][t]{\textwidth}
   \vspace{1cm}
   \centering
-  Décodage de codes polaires sur des architectures programmables
+  "Décodage de codes polaires sur des architectures programmables"
+  \vspace{1cm}
     % \begin{columns}
       % \begin{column}{0.63\textwidth}
         % \vspace{-30pt}
@@ -276,8 +277,8 @@
 
     %   \end{column}
     %   \begin{column}{0.33\textwidth}
-    %     \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
-    %     \only<+->{\includegraphics[width=\textwidth]{fig/frise}\\ \vspace{0.5cm}}
+        \includegraphics[width=0.25\textwidth]{logos/ims}\hspace{2cm}
+        \includegraphics[width=0.25\textwidth]{logos/poly2}
     %     \only<+->{\includegraphics[width=\textwidth]{fig/frise}}
     %   \end{column}
     % \end{columns}
@@ -341,8 +342,51 @@
 
       \end{column}
       \begin{column}{0.40\textwidth}
-        \only<1->{\includegraphics[width=\textwidth]{fig/full_tensilica}\\ \vspace{0.5cm}}
-        \only<2->{\includegraphics[width=\textwidth]{fig/tta_base}}
+        \only<1-2>{\includegraphics[width=\textwidth]{fig/full_tensilica}\\ \vspace{0.5cm}}
+        \only<2>{\includegraphics[width=\textwidth]{fig/tta_base}}
+            \only<3>{
+            \vspace{-0.5cm}
+    \begin{table}
+      \centering
+      {
+      \small\resizebox{\linewidth}{!}{
+      \begin{tabular}{c|c|c|c|c}
+        \toprule
+
+        Architecture & $N$ & \begin{tabular}{c}Latence\\{[$\mu$s]}\end{tabular} & \begin{tabular}{c}Débit\\{[Mb/s]}\end{tabular} & \begin{tabular}{c}$E_b$\\{[nJ/bit]}\end{tabular} \\
+
+        \cmidrule(lr){1-1}
+        \cmidrule(lr){2-2}
+        \cmidrule(lr){3-5}
+
+
+        \multirow{2}{*}{\bf i7-3.3GHz}              & $1024$   & $2.0$  & \GREEN{$\mathbf{257}$} & \RED{$\mathbf{41}$}   \\
+                                                    & $512$    & $1.2$  & \GREEN{$\mathbf{210}$} & \RED{$\mathbf{49}$}   \\
+        \multirow{2}{*}{\bf (GPP)}                  & $256$    & $0.7$  & \GREEN{$\mathbf{179}$} & \RED{$\mathbf{59}$}   \\
+                                                    & $128$    & $0.4$  & \GREEN{$\mathbf{143}$} & \RED{$\mathbf{73}$}   \\
+        \midrule
+        \multirow{2}{*}{\bf A57-1.1GHz}             & $1024$   & $10.7$ & \ORANGE{$\mathbf{48}$} & \RED{$\mathbf{17}$}   \\
+                                                    & $512$    & $5.3$  & \ORANGE{$\mathbf{48}$} & \RED{$\mathbf{17}$}   \\
+        \multirow{2}{*}{\bf (GPP)}                  & $256$    & $2.8$  & \ORANGE{$\mathbf{46}$} & \RED{$\mathbf{17}$}   \\
+                                                    & $128$    & $1.6$  & \ORANGE{$\mathbf{41}$} & \RED{$\mathbf{20}$}   \\
+        \midrule
+        \multirow{2}{*}{\bf LX7-835MHz}             & $1024$   & $7.2$  & \ORANGE{$\mathbf{71}$} & \ORANGE{$\mathbf{1.6}$}  \\
+                                                    & $512$    & $3.9$  & \ORANGE{$\mathbf{66}$} & \ORANGE{$\mathbf{1.7}$}  \\
+        \multirow{2}{*}{\bf (ASIP)}                 & $256$    & $1.9$  & \ORANGE{$\mathbf{65}$} & \ORANGE{$\mathbf{1.7}$}  \\
+                                                    & $128$    & $1.0$  & \ORANGE{$\mathbf{62}$} & \ORANGE{$\mathbf{1.8}$}  \\
+        \midrule
+        \multirow{2}{*}{\bf TTPD-800MHz}            & $1024$   & $1.4$  & \GREEN{$\mathbf{352}$} & \GREEN{$\mathbf{0.14}$} \\ % 1512 cycles
+                                                    & $512$    & $0.8$  & \GREEN{$\mathbf{313}$} & \GREEN{$\mathbf{0.15}$} \\ % 803 cycles
+        \multirow{2}{*}{\bf (ASIP)}                 & $256$    & $0.4$  & \GREEN{$\mathbf{304}$} & \GREEN{$\mathbf{0.16}$} \\ % 413 cycles
+                                                    & $128$    & $0.2$  & \GREEN{$\mathbf{284}$} & \GREEN{$\mathbf{0.17}$} \\ % 224 cycles
+
+        \bottomrule
+      \end{tabular}
+      }}
+    \end{table}
+    }
+
+
       \end{column}
     \end{columns}
   \end{minipage}
@@ -481,7 +525,8 @@
   \begin{minipage}[t][5.0cm][t]{\textwidth}
   \centering
   \vspace{0.8cm}
-  «La double compétence logicielle et matérielle, indissociable des systèmes embarqués, est très recherchée.»
+dzadza
+    « La doubledza compétence \BLUE{logicielle} et \RED{matérielle}, indissociable des systèmes embarqués, est très recherchée. »
 
   \end{minipage}
   \begin{figure}[htp]
@@ -577,14 +622,14 @@
 
 \end{frame}
 \subsection{Recherche}
-\begin{frame}[t]{Codes Polaires}
+\begin{frame}[t]{Axe de recherche 1 : Codes Polaires}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
     \begin{columns}[T]
       \begin{column}{0.63\textwidth}
         \vspace{-0.5cm}
         \begin{itemize}
           \item<+-> Expertise développée au cours de ma thèse
-          \item<+-> Axes de recherche possibles
+          \item<+-> Thèmes de recherche
           \begin{itemize}
             \item<+-> Implémentations matérielles flexibles
             \item<+-> Implémentations logicielles hautes performance
@@ -608,27 +653,32 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{Simulation haut débit de chaînes de communications}
+\begin{frame}[t]{Axe de recherche 2 : Adéquation algorithme - architecture}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
     \begin{columns}[T]
-      \begin{column}{0.63\textwidth}
+      \begin{column}{0.48\textwidth}
         \begin{itemize}
-          \item<+-> Expertise dans les simulations haut débits (AFF3CT)
-          \vspace{0.3cm}
-          \item<+-> Réalisation de démonstrateurs (USRP)
-          \vspace{0.5cm}
           \item<+-> Modulation (FBMC/OQAM)
-          \item<3-> Entrelaceurs de turbo-codes
-          \item<3-> Modulation codée
-          \item<3-> ...
+          \item<+-> Entrelaceurs de turbo-codes
+          \item<+-> Modulation codée
+          \item<+-> ...
+          \vspace{0.5cm}
+          \item<+-> Implémentations logicielles
+          \item<+-> Implémentations matérielles
+          \item<+-> Simplifications algorithmiques
         \end{itemize}
       \end{column}
       \begin{column}{0.04\textwidth}
       \end{column}
-      \begin{column}{0.33\textwidth}
-        \centering
-        \only<1->{\includegraphics[width=0.3\textwidth]{fig/aff3ct}\\ \vspace{0.2cm}}
-        \only<2->{\includegraphics[width=\textwidth]{fig/usrp}}
+      \begin{column}{0.48\textwidth}
+        \begin{itemize}
+          \item<+-> Exemple : SCMA
+          \item<+-> Approximations calculatoires
+          \item<+-> Implémentation logicielle parallélisée
+          \item<+-> Débit augmenté de plusieurs ordres de grandeur
+        \end{itemize}
+        % \only<1->{\includegraphics[width=0.3\textwidth]{fig/aff3ct}\\ \vspace{0.2cm}}
+        % \only<2->{\includegraphics[width=\textwidth]{fig/usrp}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -638,7 +688,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{ASIP}
+\begin{frame}[t]{Axe de recherche 3 : Architectures ASIP}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
     \begin{itemize}
       \item<+-> Nombreux travaux sur architectures ASIP (DecASIP)
@@ -665,19 +715,26 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{Collaborations internationales}
+\begin{frame}[t]{International collaborations}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
+      \vspace{-0.4cm}
     \begin{columns}[T]
       \begin{column}{0.63\textwidth}
         \small{
           \begin{itemize}
-            \item<+-> Thèse en cotutelle avec Polytechnique Montréal
+            \item<+-> Co-supervised thesis between University of Bordeaux and Polytechnique Montréal (Canada)
             \begin{itemize}
-            \item<1-> Yvon Savaria, Directeur de thèse
-            \item<1-> Pierre Langlois, Co-auteur
+            \item<1-> Yvon Savaria, director
+            \item<1-> Pierre Langlois, co-author
+            \begin{itemize}
+              \item<+->[$\rightarrow$] Architecture-Algorithm Adequation
             \end{itemize}
-            \vspace{0.8cm}
-            \item<+-> Thibaud Tonnellier, McGill University (Canada), Co-auteur
+            \end{itemize}
+            \vspace{0.25cm}
+            \item<+-> Thibaud Tonnellier, McGill University (Canada), co-author
+            \begin{itemize}
+              \item<+->[$\rightarrow$] Polar Codes
+            \end{itemize}
           \end{itemize}
         }
       \end{column}
@@ -685,8 +742,8 @@
       \end{column}
       \begin{column}{0.33\textwidth}
       \centering
-        \only<1->{\vspace{0.6cm}\includegraphics[width=0.5\textwidth]{fig/poly}\\\vspace{1.6cm} }
-        \only<2->{\includegraphics[width=0.5\textwidth]{fig/mcgill}\\}
+        \only<1->{\vspace{0.8cm}\includegraphics[width=0.5\textwidth]{fig/poly}\\\vspace{1.6cm} }
+        \only<3->{\includegraphics[width=0.5\textwidth]{fig/mcgill}\\}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -697,16 +754,23 @@
 \end{frame}
 
 
-\begin{frame}[t]{Collaborations internationales}
+\begin{frame}[t]{International collaborations}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
+      \vspace{-0.3cm}
     \begin{columns}[T]
       \begin{column}{0.63\textwidth}
         \small{
           \begin{itemize}
-            \item<+-> Pekka Jääskelainen, TUT (Finlande), Co-auteur
-            \item<+-> Vyacheslav Klymentiev, Saint Petersburg Electrotechnical University (Russie), AFF3CT
-            \item<2-> Peter Trifonov, Saint Petersburg Polytechnic University (Russie), AFF3CT
-            \item<2-> Chen Shuang, Tsinghua University (Chine), AFF3CT
+            \item<+-> Pekka Jääskelainen, TUT (Finland), co-author
+            \begin{itemize}
+              \item<+->[$\rightarrow$] ASIP
+            \end{itemize}
+            \item<+-> Vyacheslav Klymentiev, Saint Petersburg Electrotechnical University (Russia)
+            \item<3-> Peter Trifonov, Saint Petersburg Polytechnic University (Russia)
+            \item<3-> Chen Shuang, Tsinghua University (China)
+            \begin{itemize}
+              \item<+->[$\rightarrow$] AFF3CT
+            \end{itemize}
           \end{itemize}
         }
       \end{column}
@@ -715,9 +779,9 @@
       \begin{column}{0.33\textwidth}
       \centering
         \only<1->{\includegraphics[width=1\textwidth]{fig/tampere}\\\vspace{-0.1cm}}
-        \only<2->{\includegraphics[width=0.26\textwidth]{fig/etu}\\\vspace{0.5cm}}
-        \only<2->{\includegraphics[width=0.5\textwidth]{fig/polysp}\vspace{-0.2cm}\\}
-        \only<2->{\includegraphics[width=0.7\textwidth]{fig/tsinghua}}
+        \only<3->{\includegraphics[width=0.26\textwidth]{fig/etu}\\\vspace{0.5cm}}
+        \only<3->{\includegraphics[width=0.5\textwidth]{fig/polysp}\vspace{-0.2cm}\\}
+        \only<3->{\includegraphics[width=0.7\textwidth]{fig/tsinghua}}
 
       \end{column}
     \end{columns}
@@ -727,5 +791,14 @@
     \includegraphics[width=\textwidth]{fig/frise23}
   \end{figure}
 \end{frame}
+
+
+\begin{frame}[c]{}
+\vfill
+\centering
+Merci pour votre attention !
+\vfill
+\end{frame}
+
 \end{document}
 
