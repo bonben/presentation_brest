@@ -525,8 +525,7 @@
   \begin{minipage}[t][5.0cm][t]{\textwidth}
   \centering
   \vspace{0.8cm}
-dzadza
-    « La doubledza compétence \BLUE{logicielle} et \RED{matérielle}, indissociable des systèmes embarqués, est très recherchée. »
+    « La double compétence \BLUE{logicielle} et \RED{matérielle}, indissociable des systèmes embarqués, est très recherchée. »
 
   \end{minipage}
   \begin{figure}[htp]
@@ -618,32 +617,74 @@ dzadza
     \centering
     \includegraphics[width=\textwidth]{fig/frise19}
   \end{figure}
-
-
 \end{frame}
+
 \subsection{Recherche}
-\begin{frame}[t]{Axe de recherche 1 : Codes Polaires}
+\begin{frame}[t]{Plan}
+  \centering
+  \tableofcontents[
+    currentsection,
+    currentsubsection,
+    sectionstyle=show/show,
+    subsectionstyle=show/shaded/shaded,
+  ]
+\end{frame}
+
+\begin{frame}[t]{Axe de recherche 1 : Plateformes hétérogènes pour l'IA}
+  \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \vspace{-0.5cm}
+    \begin{itemize}
+      \item<+-> De nombreuses plateformes potentielles (CPU, GPU, FPGA, TPU)
+      \item<+-> ... et leurs combinaisons (architectures hétérogènes).
+      \item<+-> Il est nécessaire de se doter d'outil facilitant leur utilisation:
+      \begin{itemize}
+        \item<+-> des bibliothèques logicielles pour calcul parallèle (C++ STL, SyCL),
+        \item<+-> des langages et compilateurs pour cibles parallèles,
+        \item<+-> des langages (SystemC, System Verilog) et outils de synthèse matérielle haut niveau (Vivado HLS,
+        Intel HLS Compiler)
+      \end{itemize}
+      \item<+-> Les architectures de type ASIP sont également des solutions potentielles pour l'électronique embarquée.
+    \end{itemize}
+  \end{minipage}
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[width=\textwidth]{fig/frise20}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{Axe de recherche 2 : Maintenance prédictive}
+
+  \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \vspace*{-0.5cm}
+    \begin{figure}[htp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{fig/research/worldcast/phm.pdf}
+    \end{figure}
+  \end{minipage}
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[width=\textwidth]{fig/frise20}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}[t]{Axe de recherche 2 : Maintenance prédictive}
+
   \begin{minipage}[t][5.0cm][t]{\textwidth}
     \begin{columns}[T]
       \begin{column}{0.63\textwidth}
-        \vspace{-0.5cm}
-        \begin{itemize}
-          \item<+-> Expertise développée au cours de ma thèse
-          \item<+-> Thèmes de recherche
+          \vspace*{1cm}
           \begin{itemize}
-            \item<+-> Implémentations matérielles flexibles
-            \item<+-> Implémentations logicielles hautes performance
-            \item<+-> Algorithmes à sortie souple
-            \item<+-> Nouvelles constructions : multinoyaux, assymétriques
-          \end{itemize}
+            \item Entreprise Worldcast Systems
+            \item Proposition CIFRE
+            \item Résultats concrets
+            \item Prochaine étape : Kybio
         \end{itemize}
-      \end{column}
+        \end{column}
       \begin{column}{0.04\textwidth}
-
       \end{column}
       \begin{column}{0.33\textwidth}
-        \only<1->{\includegraphics[width=\textwidth]{fig/sc}\\ \vspace{0.5cm}}
-        \only<3->{\includegraphics[width=\textwidth]{fig/ilp-1}}
+        \includegraphics[width=\textwidth]{fig/research/worldcast/worldcast.png}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -653,67 +694,127 @@ dzadza
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{Axe de recherche 2 : Adéquation algorithme - architecture}
+\begin{frame}[t]{Axe de recherche 2 : Maintenance prédictive}
+
+  \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \only<+>{
+      \begin{columns}[T]
+        \begin{column}{0.63\textwidth}
+            \vspace*{1cm}
+            \begin{itemize}
+              \item Entreprise Worldcast Systems
+              \item Proposition CIFRE
+              \item Résultats concrets
+              \item Prochaine étape : Kybio
+          \end{itemize}
+          \end{column}
+        \begin{column}{0.04\textwidth}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+          \includegraphics[width=\textwidth]{fig/research/worldcast/worldcast.png}
+        \end{column}
+      \end{columns}
+    }
+
+    \only<4>{
+      \begin{figure}[t]
+        \includegraphics[width=0.3\textwidth]{fig/research/worldcast/worldcast_cut}
+      \end{figure}
+      \begin{itemize}
+          \item Extraire automatiquement des données de surveillance SNMP,
+          \item réaliser l'interface avec logiciel Kybio,
+          \item proposer des algorithmes de prédiction,
+          \item les appliquer et les évaluer sur les données recueillies.
+      \end{itemize}
+    }
+    \begin{figure}[htp]
+      \centering
+      \only<+>{\vspace*{-0.5cm}\includegraphics[width=0.8\textwidth]{fig/research/worldcast/dashboard.jpg}}
+      \only<+>{\vspace*{-0.5cm}\includegraphics[width=0.8\textwidth]{fig/research/worldcast/readings.jpg}}
+    \end{figure}
+
+  \end{minipage}
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[width=\textwidth]{fig/frise20}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{Axe de recherche 3 : IA pour la construction de codes}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
     \begin{columns}[T]
-      \begin{column}{0.48\textwidth}
+      \begin{column}{0.45\textwidth}
+        \vspace*{-1.1cm}
+        \begin{center}
+          \only<+>{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_left_1}}
+          \only<+->{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_left_2}}
+        \end{center}
+        \vspace*{-1cm}
+        \small{
         \begin{itemize}
-          \item<+-> Modulation (FBMC/OQAM)
-          \item<+-> Entrelaceurs de turbo-codes
-          \item<+-> Modulation codée
-          \item<+-> ...
-          \vspace{0.5cm}
-          \item<+-> Implémentations logicielles
-          \item<+-> Implémentations matérielles
-          \item<+-> Simplifications algorithmiques
+          \setlength\itemsep{-0.5em}
+          \item[\GREEN{$+$}]<9-> \GREEN{reproductible}
+          \item[\GREEN{$+$}]<10-> \GREEN{faible complexité}
+          \item[\RED{$-$}]  <11-> \RED  {a priori : SC}
+          \item[\RED{$-$}]  <12-> \RED  {a priori : AWGN}
+          % \item[\RED{$-$}]  <+-> \RED  {non optimal}
+          \item[\RED{$-$}]  <13-> \RED  {spécifique au code}
         \end{itemize}
+        }
       \end{column}
       \begin{column}{0.04\textwidth}
       \end{column}
-      \begin{column}{0.48\textwidth}
+      \begin{column}{0.45\textwidth}
+        \vspace*{-1.1cm}
+        \begin{center}
+          \only<+>{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_right_1}}
+          \only<+>{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_right_2}}
+          \only<+>{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_right_3}}
+          \only<+>{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_right_4}}
+          \only<+>{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_right_5}}
+          \only<+->{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_right_6}}
+        \end{center}
+        \vspace*{-1cm}
+        \small{
         \begin{itemize}
-          \item<+-> Exemple : SCMA
-          \item<+-> Approximations calculatoires
-          \item<+-> Implémentation logicielle parallélisée
-          \item<+-> Débit augmenté de plusieurs ordres de grandeur
+          \setlength\itemsep{-0.5em}
+          \item[\RED{$-$}]  <+-> \RED  {non reproductible}
+          \item[\RED{$-$}]  <+-> \RED  {forte complexité}
+          \item[\GREEN{$+$}]<+-> \GREEN{s'adapte au décodeur}
+          \item[\GREEN{$+$}]<+-> \GREEN{s'adapte au canal}
+          \item[\GREEN{$+$}]<+-> \GREEN{méthode générique}
+          \item[\GREEN{$+$}]<+-> \GREEN{s'adapte à l'implémentation}
         \end{itemize}
-        % \only<1->{\includegraphics[width=0.3\textwidth]{fig/aff3ct}\\ \vspace{0.2cm}}
-        % \only<2->{\includegraphics[width=\textwidth]{fig/usrp}}
+        }
       \end{column}
     \end{columns}
   \end{minipage}
   \begin{figure}[htp]
     \centering
-    \includegraphics[width=\textwidth]{fig/frise21}
+    \includegraphics[width=\textwidth]{fig/frise24}
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{Axe de recherche 3 : Architectures ASIP}
+
+\begin{frame}[t]{Axe de recherche 3 : IA pour la construction de codes}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \begin{center}
+      Un simulateur performant \& générique : AFF3CT
+    \end{center}
     \begin{itemize}
-      \item<+-> Nombreux travaux sur architectures ASIP (DecASIP)
-      \item<+-> Intégration : compétent sur les différents langages ASIP (incl. LISA + Synopsys)
-      \item<+-> Intégration : intérêt des architectures TTA
+      \item[\RED{$-$}]  <+-> \RED  {forte complexité} $\rightarrow$ simulateur performant
+      \item[\GREEN{$+$}]<+-> \GREEN{méthode générique} $\rightarrow$ nombreux codes
+      \item[\GREEN{$+$}]<+-> \GREEN{s'adapte au décodeur} $\rightarrow$ nombreux algorithmes
+      \item[\GREEN{$+$}]<+-> \GREEN{s'adapte au canal} $\rightarrow$ nombreux modèles de canal
+      \item[\GREEN{$+$}]<+-> \GREEN{s'adapte à l'implémentation} $\rightarrow$ décodeurs génériques et flexibles
     \end{itemize}
-    \only<1>{
-      \vspace{-2cm}
-      \begin{enumerate}
-        \renewcommand{\section}[2]{} % Trick to avoid references section
-        \renewcommand*{\bibfont}{\tiny}
-        \nocite{6579576,7155493,6654620,6683963,6571888,7041196}
-        \printbibliography[keyword={asip-amer}]
-      \end{enumerate}
-    }
-    \only<3>{
-      \centering
-      \includegraphics[width=0.6\textwidth]{fig/ilp-1}
-    }
-  \end{minipage}
-  \begin{figure}[htp]
-    \centering
-    \includegraphics[width=\textwidth]{fig/frise22}
-  \end{figure}
+\end{minipage}
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=\textwidth]{fig/frise24}
+\end{figure}
 \end{frame}
+
 
 \begin{frame}[t]{International collaborations}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
@@ -802,3 +903,95 @@ Merci pour votre attention !
 
 \end{document}
 
+% \begin{frame}[t]{Axe de recherche 1 : Codes Polaires}
+%   \begin{minipage}[t][5.0cm][t]{\textwidth}
+%     \begin{columns}[T]
+%       \begin{column}{0.63\textwidth}
+%         \vspace{-0.5cm}
+%         \begin{itemize}
+%           \item<+-> Expertise développée au cours de ma thèse
+%           \item<+-> Thèmes de recherche
+%           \begin{itemize}
+%             \item<+-> Implémentations matérielles flexibles
+%             \item<+-> Implémentations logicielles hautes performance
+%             \item<+-> Algorithmes à sortie souple
+%             \item<+-> Nouvelles constructions : multinoyaux, assymétriques
+%           \end{itemize}
+%         \end{itemize}
+%       \end{column}
+%       \begin{column}{0.04\textwidth}
+
+%       \end{column}
+%       \begin{column}{0.33\textwidth}
+%         \only<1->{\includegraphics[width=\textwidth]{fig/sc}\\ \vspace{0.5cm}}
+%         \only<3->{\includegraphics[width=\textwidth]{fig/ilp-1}}
+%       \end{column}
+%     \end{columns}
+%   \end{minipage}
+%   \begin{figure}[htp]
+%     \centering
+%     \includegraphics[width=\textwidth]{fig/frise20}
+%   \end{figure}
+% \end{frame}
+
+% \begin{frame}[t]{Axe de recherche 2 : Adéquation algorithme - architecture}
+%   \begin{minipage}[t][5.0cm][t]{\textwidth}
+%     \begin{columns}[T]
+%       \begin{column}{0.48\textwidth}
+%         \begin{itemize}
+%           \item<+-> Modulation (FBMC/OQAM)
+%           \item<+-> Entrelaceurs de turbo-codes
+%           \item<+-> Modulation codée
+%           \item<+-> ...
+%           \vspace{0.5cm}
+%           \item<+-> Implémentations logicielles
+%           \item<+-> Implémentations matérielles
+%           \item<+-> Simplifications algorithmiques
+%         \end{itemize}
+%       \end{column}
+%       \begin{column}{0.04\textwidth}
+%       \end{column}
+%       \begin{column}{0.48\textwidth}
+%         \begin{itemize}
+%           \item<+-> Exemple : SCMA
+%           \item<+-> Approximations calculatoires
+%           \item<+-> Implémentation logicielle parallélisée
+%           \item<+-> Débit augmenté de plusieurs ordres de grandeur
+%         \end{itemize}
+%         % \only<1->{\includegraphics[width=0.3\textwidth]{fig/aff3ct}\\ \vspace{0.2cm}}
+%         % \only<2->{\includegraphics[width=\textwidth]{fig/usrp}}
+%       \end{column}
+%     \end{columns}
+%   \end{minipage}
+%   \begin{figure}[htp]
+%     \centering
+%     \includegraphics[width=\textwidth]{fig/frise21}
+%   \end{figure}
+% \end{frame}
+
+% \begin{frame}[t]{Axe de recherche 3 : Architectures ASIP}
+%   \begin{minipage}[t][5.0cm][t]{\textwidth}
+%     \begin{itemize}
+%       \item<+-> Nombreux travaux sur architectures ASIP (DecASIP)
+%       \item<+-> Intégration : compétent sur les différents langages ASIP (incl. LISA + Synopsys)
+%       \item<+-> Intégration : intérêt des architectures TTA
+%     \end{itemize}
+%     \only<1>{
+%       \vspace{-2cm}
+%       \begin{enumerate}
+%         \renewcommand{\section}[2]{} % Trick to avoid references section
+%         \renewcommand*{\bibfont}{\tiny}
+%         \nocite{6579576,7155493,6654620,6683963,6571888,7041196}
+%         \printbibliography[keyword={asip-amer}]
+%       \end{enumerate}
+%     }
+%     \only<3>{
+%       \centering
+%       \includegraphics[width=0.6\textwidth]{fig/ilp-1}
+%     }
+%   \end{minipage}
+%   \begin{figure}[htp]
+%     \centering
+%     \includegraphics[width=\textwidth]{fig/frise22}
+%   \end{figure}
+% \end{frame}
