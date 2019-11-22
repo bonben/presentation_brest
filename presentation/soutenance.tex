@@ -610,7 +610,8 @@
 \begin{frame}[t]{TAF CoOC}
   \begin{minipage}[t][5.0cm][t]{\textwidth}
         \begin{itemize}
-          \item Conception centrée utilisateur
+          \item Conception d'Objets Communicants
+          \item Conception centrée sur l'utilisateur
           \item Prototypage rapide et développement agile
           \item L'objet dans son environnement
           \item Projet fil rouge
@@ -638,28 +639,6 @@
   ]
 \end{frame}
 
-% \begin{frame}[t]{Axe de recherche 1 : Plateformes hétérogènes pour l'IA}
-%   \begin{minipage}[t][5.0cm][t]{\textwidth}
-%     \vspace{-0.5cm}
-%     \begin{itemize}
-%       \item<+-> De nombreuses plateformes potentielles (CPU, GPU, FPGA, TPU)
-%       \item<+-> ... et leurs combinaisons (architectures hétérogènes).
-%       \item<+-> Il est nécessaire de se doter d'outil facilitant leur utilisation:
-%       \begin{itemize}
-%         \item<+-> des bibliothèques logicielles pour calcul parallèle (C++ STL, SyCL),
-%         \item<+-> des langages et compilateurs pour cibles parallèles,
-%         \item<+-> des langages (SystemC, System Verilog) et outils de synthèse matérielle haut niveau (Vivado HLS,
-%         Intel HLS Compiler)
-%       \end{itemize}
-%       \item<+-> Les architectures de type ASIP sont également des solutions potentielles pour l'électronique embarquée.
-%     \end{itemize}
-%   \end{minipage}
-%   \begin{figure}[htp]
-%     \centering
-%     \includegraphics[width=\textwidth]{fig/frise12}
-%   \end{figure}
-% \end{frame}
-
 \begin{frame}[t]{Axe de recherche 1 : Maintenance prédictive}
 
   \begin{minipage}[t][5.0cm][t]{\textwidth}
@@ -683,7 +662,7 @@
             \vspace*{1cm}
             \begin{itemize}
               \item Entreprise Worldcast Systems
-              \item Résultats concrets
+              \item Premiers résultats
               \item Proposition CIFRE
               \item Prochaine étape : Kybio
           \end{itemize}
@@ -738,9 +717,9 @@
           \item[\GREEN{$+$}]<9-> \GREEN{reproductible}
           \item[\GREEN{$+$}]<10-> \GREEN{faible complexité}
           \item[\RED{$-$}]  <11-> \RED  {a priori : SC}
-          \item[\RED{$-$}]  <12-> \RED  {a priori : AWGN}
+          \item[\RED{$-$}]  <11-> \RED  {a priori : AWGN}
           % \item[\RED{$-$}]  <+-> \RED  {non optimal}
-          \item[\RED{$-$}]  <13-> \RED  {spécifique au code}
+          \item[\RED{$-$}]  <11-> \RED  {spécifique au code}
         \end{itemize}
         }
       \end{column}
@@ -763,9 +742,8 @@
           \item[\RED{$-$}]  <+-> \RED  {non reproductible}
           \item[\RED{$-$}]  <+-> \RED  {forte complexité}
           \item[\GREEN{$+$}]<+-> \GREEN{s'adapte au décodeur}
-          \item[\GREEN{$+$}]<+-> \GREEN{s'adapte au canal}
-          \item[\GREEN{$+$}]<+-> \GREEN{méthode générique}
-          \item[\GREEN{$+$}]<+-> \GREEN{s'adapte à l'implémentation}
+          \item[\GREEN{$+$}]<11> \GREEN{s'adapte au canal}
+          \item[\GREEN{$+$}]<11> \GREEN{méthode générique}
         \end{itemize}
         }
       \end{column}
@@ -824,7 +802,7 @@
             \vspace{0.25cm}
             \item<+-> Thibaud Tonnellier, McGill University (Canada), co-author
             \begin{itemize}
-              \item<+->[$\rightarrow$] Polar Codes
+              \item<+->[$\rightarrow$] Polar Codes \& AI
             \end{itemize}
           \end{itemize}
         }
@@ -891,7 +869,42 @@ Merci pour votre attention !
 \vfill
 \end{frame}
 
+\begin{frame}[c, noframenumbering]{ASIP : Compromis Flexibilité performance. }
+  \begin{itemize}
+    \item Une solution générique et pérenne de génération de DNN basse consommation,
+    \item dimensionnement flexible : nombre de modules, interconnexion, multic\oe{}urs,
+    \item évolutions après fabrication (programmabilité),
+    \item pour l'équipe de recherche : capitalisation.
+  \end{itemize}
+  \centering
+  \includegraphics[width=0.6\textwidth]{fig/tta_base}
+\end{frame}
+
+\begin{frame}[t, noframenumbering]{Plateformes hétérogènes pour l'IA}
+  \begin{minipage}[t][5.0cm][t]{\textwidth}
+    \vspace{-0.5cm}
+    \begin{itemize}
+      \item<+-> De nombreuses plateformes potentielles (CPU, GPU, FPGA, TPU)
+      \item<+-> ... et leurs combinaisons (architectures hétérogènes).
+      \item<+-> Il est nécessaire d'en réaliser l'abstraction
+      \begin{itemize}
+        \item<+-> des bibliothèques logicielles pour calcul parallèle (C++ STL, SyCL),
+        \item<+-> des langages et compilateurs pour cibles parallèles (OpenCL, TCE),
+        \item<+-> des langages (SystemC, System Verilog) et outils de synthèse matérielle haut niveau (Vivado HLS,
+        Intel HLS Compiler)
+      \end{itemize}
+    \end{itemize}
+  \end{minipage}
+
+\end{frame}
+
+\begin{frame}[t, noframenumbering]{IA pour la construction de codes}
+  \centering
+  \includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_right_6}
+\end{frame}
+
 \end{document}
+
 
 % \begin{frame}[t]{Axe de recherche 1 : Codes Polaires}
 %   \begin{minipage}[t][5.0cm][t]{\textwidth}
