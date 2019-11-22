@@ -295,11 +295,11 @@
       \begin{column}{0.63\textwidth}
         \begin{itemize}
           \item<+-> Décodeurs logiciels - x86\_64 \& ARM
+          \item<+-> Implémentation flexible et générique
           \item<+-> Parallélisation
           \begin{itemize}
-            \item<2-> SIMD, multithreads, multinodes
+            \item<3-> SIMD, multithreads, multinodes
           \end{itemize}
-          \item<+-> Implémentation flexible et générique
           \item<+-> Adaptatif le plus rapide à ce jour
           \item<+-> Intégré avec le projet AFF3CT
           \begin{itemize}
@@ -415,13 +415,16 @@
     \begin{itemize}
       \item<+-> Informatique
     \end{itemize}
-    \small{
-    \begin{tabular}{ l l l l }
-      Architecture des ordinateurs     & 16 HETD & 1A & Archi  \\
-      Projet micro-processeur          & 36 HETD & 2A & C      \\
-      Projet micro-informatique        & 42 HETD & 2A & C - OS \\
-      Programmation objet. Langage C++ & 15 HETD & 2A & C++
-    \end{tabular}
+    \only<2>
+    {
+      \small{
+      \begin{tabular}{ l l l l }
+        Architecture des ordinateurs     & 16 HETD & 1A & Archi  \\
+        Projet micro-processeur          & 36 HETD & 2A & C      \\
+        Projet micro-informatique        & 42 HETD & 2A & C - OS \\
+        Programmation objet. Langage C++ & 15 HETD & 2A & C++
+      \end{tabular}
+      }
     }
   \end{minipage}
   \begin{figure}[htp]
@@ -484,7 +487,7 @@
 \renewcommand{\section}[2]{} % Trick to avoid references section
 
     \renewcommand*{\bibfont}{\scriptsize}
-    \nocite{leonardon_fast_2017,leonardon_custom_2018,ghaffari_improving_2017,leonardon_tta_2018,Ghaffari2018,cassagne_fast_2017,cassagne_gdr_2017}
+    \nocite{leonardon_fast_2017,leonardon_custom_2018,ghaffari_improving_2017,leonardon_tta_2018,leonardon_tta_2019,Ghaffari2018,cassagne_fast_2017,cassagne_gdr_2017,cassagne2019aff3ct}
     \vfill
     \item<+-> Implémentation du décodeur SCMA
     \printbibliography[keyword={ghaffari}]
@@ -495,6 +498,7 @@
   \end{enumerate}
 
 \end{frame}
+
 
 
 
@@ -585,8 +589,8 @@
       \begin{column}{0.33\textwidth}
         \only<1>{\includegraphics[width=.9\textwidth]{fig/UEE1}}
         \only<2>{\includegraphics[width=.9\textwidth]{fig/UEE3}}
-        \only<3>{\includegraphics[width=.9\textwidth]{fig/UEE4}}
-        \only<4>{\includegraphics[width=.9\textwidth]{fig/UEE2}}
+        % \only<3>{\includegraphics[width=.9\textwidth]{fig/UEE4}}
+        \only<3>{\includegraphics[width=.9\textwidth]{fig/UEE2}}
       \end{column}
     \end{columns}
   \end{minipage}
@@ -594,8 +598,8 @@
     \centering
     \only<1>{\includegraphics[width=\textwidth]{fig/frise16}}
     \only<2>{\includegraphics[width=\textwidth]{fig/frise17}}
-    \only<3>{\includegraphics[width=\textwidth]{fig/frise17}}
-    \only<4>{\includegraphics[width=\textwidth]{fig/frise18}}
+    % \only<3>{\includegraphics[width=\textwidth]{fig/frise17}}
+    \only<3>{\includegraphics[width=\textwidth]{fig/frise18}}
   \end{figure}
 
 
@@ -619,7 +623,7 @@
   \end{minipage}
   \begin{figure}[htp]
     \centering
-    \includegraphics[width=\textwidth]{fig/frise19}
+    \includegraphics[width=\textwidth]{fig/frise25}
   \end{figure}
 \end{frame}
 
@@ -726,6 +730,7 @@
           \only<+>{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_left_1}}
           \only<+->{\includegraphics[width=\textwidth]{fig/research/ai_codes/schema_ai_coding_left_2}}
         \end{center}
+      
         \vspace*{-1cm}
         \small{
         \begin{itemize}
@@ -765,6 +770,14 @@
         }
       \end{column}
     \end{columns}
+      \only<3>
+        {
+          \vspace*{-2.5cm}
+          \renewcommand{\section}[2]{} % Trick to avoid references section
+          \renewcommand*{\bibfont}{\scriptsize}
+          \nocite{ai_coding}
+          \printbibliography[keyword={ai_coding}]
+        }
   \end{minipage}
   \begin{figure}[htp]
     \centering
